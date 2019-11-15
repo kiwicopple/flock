@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext, createContext } from 'react'
 import queryString from 'query-string'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
+import 'firebase/firestore'
 
 if (!firebase.apps.length) {
   // Replace with your own Firebase credentials
@@ -108,4 +109,22 @@ function useProvideAuth() {
 
 const getFromQueryString = key => {
   return queryString.parse(window.location.search)[key]
+}
+
+export const addConfig = () => {
+  console.log('addConfig', addConfig)
+  firebase
+    .firestore()
+    .collection('config')
+    .add({
+      first: 'Ada',
+      last: 'Lovelace',
+      born: 1815,
+    })
+    .then(function(docRef) {
+      console.log('Document written with ID: ', docRef.id)
+    })
+    .catch(function(error) {
+      console.error('Error adding document: ', error)
+    })
 }

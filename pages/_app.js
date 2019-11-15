@@ -1,11 +1,11 @@
-import React from "react";
-import Navbar from "./../components/Navbar";
-import Divider from "./../components/Divider";
-import Footer from "./../components/Footer";
-import App from "next/app";
-import "./../util/analytics.js";
-import { ProvideAuth } from "./../util/auth.js";
-import "./../styles/global.scss";
+import React from 'react'
+import Navbar from './../components/Navbar'
+import Divider from './../components/Divider'
+import Footer from './../components/Footer'
+import App from 'next/app'
+import './../util/analytics.js'
+import { ProvideAuth } from './../util/auth.js'
+import './../styles/global.scss'
 
 class MyApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -21,16 +21,12 @@ class MyApp extends App {
   // }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps } = this.props
 
     return (
       <ProvideAuth>
         <>
-          <Navbar
-            color="primary"
-            spaced={true}
-            logo="https://uploads.divjoy.com/logo-white.svg"
-          />
+          <Navbar color="primary" spaced={true} logo="/logo-white.svg" />
 
           <Component {...pageProps} />
 
@@ -40,14 +36,14 @@ class MyApp extends App {
             size="medium"
             backgroundImage=""
             backgroundImageOpacity={1}
-            description="A short description of what you do here"
-            copyright="© 2019 Company"
-            logo="https://uploads.divjoy.com/logo.svg"
+            description="Flock is an API on top of multiple notification services to overcome repetitive building and platform idiosyncrasies."
+            copyright="© 2019 Flock"
+            logo="/logo.svg"
           />
         </>
       </ProvideAuth>
-    );
+    )
   }
 }
 
-export default MyApp;
+export default MyApp
