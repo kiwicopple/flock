@@ -2,20 +2,14 @@ import React, { useState, useEffect, useContext, createContext } from 'react'
 import queryString from 'query-string'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
-import {
-  FIREBASE_API_KEY,
-  FIREBASE_AUTH_DOMAIN,
-  FIREBASE_PROJECT_ID,
-  FIREBASE_APP_ID,
-} from './constants'
 
 if (!firebase.apps.length) {
   // Replace with your own Firebase credentials
   firebase.initializeApp({
-    apiKey: FIREBASE_API_KEY,
-    authDomain: FIREBASE_AUTH_DOMAIN,
-    projectId: FIREBASE_PROJECT_ID,
-    appID: FIREBASE_APP_ID,
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    appID: process.env.FIREBASE_APP_ID,
   })
 }
 
