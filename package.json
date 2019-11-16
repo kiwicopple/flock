@@ -12,11 +12,13 @@
   },
   "dependencies": {
     "@analytics/google-analytics": "0.2.0",
+    "@hapi/joi": "^16.1.7",
     "@zeit/next-sass": "0.2.1-canary.4",
     "analytics": "0.2.6",
     "bulma": "0.7.5",
     "dotenv": "^8.2.0",
     "firebase": "6.6.2",
+    "lodash": "^4.17.15",
     "next": "9.1.2-canary.7",
     "next-compose-plugins": "^2.2.0",
     "node-sass": "4.12.0",

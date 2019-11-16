@@ -3,6 +3,7 @@ import queryString from 'query-string'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
+import { TeamSchema, UserSchema } from '../interfaces'
 
 if (!firebase.apps.length) {
   // Replace with your own Firebase credentials
@@ -111,15 +112,27 @@ const getFromQueryString = key => {
   return queryString.parse(window.location.search)[key]
 }
 
-export const addConfig = () => {
-  console.log('addConfig', addConfig)
+/**
+ * Creates a new team
+ */
+export const addTeam = async team => {
+  const value = await TeamSchema.validateAsync(team)
+  const docRef = await firebase
+    .firestore()
+    .collection('config')
+    .add(value)
+  return docRef.id
+}
+
+export const addConfig = (userId, type, {}) => {
   firebase
     .firestore()
     .collection('config')
     .add({
       first: 'Ada',
       last: 'Lovelace',
-      born: 1815,
+      status: '1815',
+      created_by: userId,
     })
     .then(function(docRef) {
       console.log('Document written with ID: ', docRef.id)
