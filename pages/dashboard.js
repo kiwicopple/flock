@@ -23,11 +23,11 @@ function DashboardPage(props) {
       <div className="container">
         <div className="level is-mobile">
           <div className="level-left">
-            <h2 className="title is-3">Teams</h2>
+            <h2 className="title is-3">Projects</h2>
           </div>
           <div className="level-right">
             <h2 className="title is-3">
-              <Link href="/teams/new">
+              <Link href="/projects/new">
                 <a className="button is-primary" onClick={() => addConfig(userId)}>
                   New
                 </a>
@@ -53,22 +53,6 @@ function DashboardPage(props) {
             </article>
           </a>
         </Link>
-
-        <h2 className="title is-5">New Team</h2>
-        <div class="field">
-          <label class="label">Team ID</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="Text ID" />
-          </div>
-          <p class="help">Must be alphanumeric number</p>
-        </div>
-        <div class="field">
-          <label class="label">Team Name</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="Text name" />
-            <p class="help">You can always change the name later.</p>
-          </div>
-        </div>
       </div>
     </Section>
   )

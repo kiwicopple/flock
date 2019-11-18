@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import NavbarContainer from "./NavbarContainer";
-import Link from "next/link";
-import { useAuth } from "./../util/auth.js";
+import React, { useState } from 'react'
+import NavbarContainer from './NavbarContainer'
+import Link from 'next/link'
+import { useAuth } from './../util/auth.js'
 
 function Navbar(props) {
-  const auth = useAuth();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const auth = useAuth()
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <NavbarContainer spaced={props.spaced} color={props.color}>
+    <NavbarContainer color={props.color}>
       <div className="container">
         <div className="navbar-brand">
           <div className="navbar-item">
@@ -19,7 +19,7 @@ function Navbar(props) {
             </Link>
           </div>
           <div
-            className={"navbar-burger burger" + (menuOpen ? " is-active" : "")}
+            className={'navbar-burger burger' + (menuOpen ? ' is-active' : '')}
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <span />
@@ -27,15 +27,15 @@ function Navbar(props) {
             <span />
           </div>
         </div>
-        <div className={"navbar-menu" + (menuOpen ? " is-active" : "")}>
+        <div className={'navbar-menu' + (menuOpen ? ' is-active' : '')}>
           <div className="navbar-end">
             {auth.user && (
-              <div className="navbar-item has-dropdown is-hoverable">
+              <div className="navbar-item has-dropdown is-hoverable ">
                 <Link href="/">
                   <a className="navbar-link">Account</a>
                 </Link>
 
-                <div className="navbar-dropdown is-boxed">
+                <div className="navbar-dropdown is-boxed is-right">
                   <Link href="/dashboard">
                     <a className="navbar-item">Dashboard</a>
                   </Link>
@@ -44,8 +44,8 @@ function Navbar(props) {
                     <a
                       className="navbar-item"
                       onClick={e => {
-                        e.preventDefault();
-                        auth.signout();
+                        e.preventDefault()
+                        auth.signout()
                       }}
                     >
                       Sign out
@@ -64,7 +64,7 @@ function Navbar(props) {
         </div>
       </div>
     </NavbarContainer>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

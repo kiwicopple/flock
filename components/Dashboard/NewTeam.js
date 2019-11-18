@@ -102,7 +102,7 @@ function Auth(props) {
         <div className="field">
           <p className="control ">
             <button
-              className={`button is-medium is-primary is-medium is-fullwidth ${
+              className={`button is-primary is-fullwidth ${
                 props.status && props.status.type === 'pending' ? 'isloading' : 'isnormal'
               }`}
             >
