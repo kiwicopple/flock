@@ -17,8 +17,8 @@ function IndexPage(props) {
         backgroundImage=""
         backgroundImageOpacity={1}
         title="One API, many services."
-        subtitle="Flock is an API on top of multiple notification services to overcome repetitive building and platform idiosyncrasies."
-        buttonText="Start Free Trial"
+        subtitle="Flock bundles all of your favourite external systems into one easy to use RESTful API."
+        buttonText="Request Early Access"
         buttonOnClick={() => {
           // Navigate to pricing page
           router.push('/pricing')
@@ -53,8 +53,8 @@ function IndexPage(props) {
         size="medium"
         backgroundImage=""
         backgroundImageOpacity={1}
-        title="Ready to get started?"
-        buttonText="Get Started"
+        title="Request early access!"
+        buttonText="Pre-register"
         buttonOnClick={() => {
           // Navigate to pricing page
           router.push('/pricing')

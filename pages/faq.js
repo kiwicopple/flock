@@ -1,10 +1,10 @@
-import React from "react";
-import FaqSection from "./../components/FaqSection";
-import CtaSection from "./../components/CtaSection";
-import { useRouter } from "next/router";
+import React from 'react'
+import FaqSection from './../components/FaqSection'
+import CtaSection from './../components/CtaSection'
+import { useRouter } from 'next/router'
 
 function FaqPage(props) {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <>
@@ -22,14 +22,14 @@ function FaqPage(props) {
         backgroundImage=""
         backgroundImageOpacity={1}
         title="Ready to get started?"
-        buttonText="Get Started"
+        buttonText="Get early access."
         buttonOnClick={() => {
           // Navigate to pricing page
-          router.push("/pricing");
+          router.push('/pricing')
         }}
       />
     </>
-  );
+  )
 }
 
-export default FaqPage;
+export default FaqPage

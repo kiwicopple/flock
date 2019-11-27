@@ -21,7 +21,7 @@ function FeaturesSection(props) {
               {
                 title: 'Single point of entry',
                 body:
-                  'Use your favourite RESTful library, rather than instally many third-party libraries.',
+                  'Use your favourite RESTful library, rather than installing many third-party libraries.',
                 image: 'https://uploads.divjoy.com/undraw-directions_x53j.svg',
               },
               {

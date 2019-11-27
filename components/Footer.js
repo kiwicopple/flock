@@ -1,7 +1,7 @@
-import React from "react";
-import Section from "./Section";
-import Link from "next/link";
-import "./Footer.scss";
+import React from 'react'
+import Section from './Section'
+import Link from 'next/link'
+import './Footer.scss'
 
 function Footer(props) {
   return (
@@ -17,24 +17,16 @@ function Footer(props) {
             <Link href="/">
               <a className="brand">
                 <div className="brand-icon">
-                  <img
-                    className="FooterComponent__logo"
-                    src={props.logo}
-                    alt="Logo"
-                  />
+                  <img className="FooterComponent__logo" src={props.logo} alt="Logo" />
                 </div>
               </a>
             </Link>
 
             {props.description && (
-              <p className="FooterComponent__description">
-                {props.description}
-              </p>
+              <p className="FooterComponent__description">{props.description}</p>
             )}
 
-            {props.copyright && (
-              <p className="FooterComponent__copywrite">{props.copyright}</p>
-            )}
+            {props.copyright && <p className="FooterComponent__copywrite">{props.copyright}</p>}
           </div>
           <div className="column is-7 is-6-widescreen is-offset-2-widescreen">
             <div className="columns">
@@ -55,7 +47,7 @@ function Footer(props) {
                   </ul>
                 </div>
               </div>
-              <div className="column is-4">
+              {/* <div className="column is-4">
                 <div className="menu">
                   <p className="menu-label">Company</p>
                   <ul className="menu-list">
@@ -80,8 +72,8 @@ function Footer(props) {
                     </li>
                   </ul>
                 </div>
-              </div>
-              <div className="column is-4">
+              </div> */}
+              {/* <div className="column is-4">
                 <div className="menu">
                   <p className="menu-label">Social</p>
                   <ul className="menu-list">
@@ -126,13 +118,13 @@ function Footer(props) {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </div>
     </Section>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
